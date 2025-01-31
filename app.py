@@ -10,9 +10,9 @@ st.set_page_config(page_title="Prediction of Disease Outbreaks", layout="wide", 
 def load_models():
     try:
         return {
-            "diabetes": pickle.load(open('K:/Prediction_Of_Disease_OutBreaks/Training_Models/diabetes-prediction-model.sav', 'rb')),
-            "heart": pickle.load(open('K:/Prediction_Of_Disease_OutBreaks/Training_Models/heart_model.sav', 'rb')),
-            "parkinsons": pickle.load(open('K:/Prediction_Of_Disease_OutBreaks/Training_Models/parkinsons_model.sav', 'rb'))
+            "diabetes": pickle.load(open('Training_Models/diabetes-prediction-model.sav', 'rb')),
+            "heart": pickle.load(open('Training_Models/heart_model.sav', 'rb')),
+            "parkinsons": pickle.load(open('Training_Models/parkinsons_model.sav', 'rb'))
         }
     except Exception as e:
         st.error(f"Error loading models: {e}")
